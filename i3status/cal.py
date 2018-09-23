@@ -6,7 +6,7 @@ import subprocess
 class Py3status:
 
     def __init__(self):
-        self.full_text = 'K'
+        self.full_text = '📅'
 
     def click_info(self):
         return {

@@ -4,7 +4,7 @@ from random import randint
 class Py3status:
 
     def __init__(self):
-        self.full_text = 'Dice'
+        self.full_text = '🎲'
 
     def click_info(self):
         return {
@@ -14,6 +14,6 @@ class Py3status:
 
     def on_click(self, event):
         rn = randint(0,9)
-        format_string = 'Dice: {random_number}'
+        format_string = '🎲 {random_number}'
         data = {'random_number': rn}
         self.full_text = self.py3.safe_format(format_string, data)

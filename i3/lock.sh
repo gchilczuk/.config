@@ -28,7 +28,5 @@ then
         convert /tmp/screen.png "$HOME/bin/imgs/lock.png" -geometry +$PX+$PY -composite -matte  /tmp/screen.png
         echo "done"
     done
-fi 
-# dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop
-# i3lock  -I 10 -d -e -u -n -i /tmp/screen.png
+fi
 i3lock -e -n  -i /tmp/screen.png

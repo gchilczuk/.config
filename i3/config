@@ -27,7 +27,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show run -lines 8 -width 30 -font "System San Francisco Display 13"
 
 # list opened windows
-bindsym $mod+l exec rofi -show window -lines 8 -width 50 -font "System San Francisco Display 13"
+bindsym $mod+shift+l exec rofi -show window -lines 8 -width 50 -font "System San Francisco Display 13"
 
 # change focus
 bindsym $mod+Left focus left
@@ -136,9 +136,9 @@ bindsym $mod+Shift+e mode "$control"
 mode "$control" {
     bindsym $mod+p exec systemctl poweroff
     bindsym $mod+r exec systemctl reboot
-    bindsym l exec i3-msg exit
-    bindsym x exec lock.sh
-    bindsym $mod+s exec sudo pm-suspend
+    bindsym $mod+l exec i3-msg exit
+    bindsym $mod+x exec lock.sh
+    bindsym $mod+s exec lock.sh; mode "default"; exec sleep 2 && systemctl suspend
     bindsym Escape mode "default"
 }
 
@@ -170,7 +170,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $bg-color            #2f343f
+set $bg-color 	         #2f343f
 set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
@@ -187,28 +187,29 @@ client.urgent $urgent-bg-color $urgent-bg-color $text-color #00ff00
 # finds out, if available)
 bar {
         status_command py3status -c ~/.config/i3status/i3status.conf -i ~/.config/i3status 
-    tray_output primary
-    colors {
-        background $bg-color
-        separator #757575
-        #                  border             background         text
-        focused_workspace  $bg-color          $bg-color          $text-color
-        inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-        urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+	tray_output primary
+	colors {
+		background $bg-color
+	 	separator #757575
+		#                  border             background         text
+		focused_workspace  $bg-color          $bg-color          $text-color
+		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
                }
 
 }
 
 bindsym $mod+shift+x exec lock.sh
+bindsym $mod+l exec lock.sh
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%; exec --no-startup-id pactl set-sink-volume 2 +5% #increase sound volume
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%; exec pactl set-sink-volume 2 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%; exec --no-startup-id pactl set-sink-volume 2 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle; exec --no-startup-id pactl set-sink-mute 2 toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -int 2.5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 2.5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
 # Media player controls
 bindsym XF86Tools exec playerctl play
@@ -233,3 +234,14 @@ exec --no-startup-id blueman-applet
 
 floating_minimum_size 75 x 50
 floating_maximum_size 1500 x 1000
+
+# other usefull shortcuts
+bindsym $mod+apostrophe mode "⚡"
+
+mode "⚡" {
+    bindsym backslash exec subl ~/.config/i3/config; mode "default"
+    bindsym m exec gnome-system-monitor; mode "default"
+    bindsym s exec subl; mode "default"
+
+    bindsym Escape mode "default"
+}
