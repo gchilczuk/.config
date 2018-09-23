@@ -228,7 +228,7 @@ exec firefox
 exec keepassx
 exec copyq
 exec redshift-gtk
-exec_always feh --bg-scale ~/bin/imgs/wallpaper.png
+exec_always feh --bg-scale ~/.config/i3/wallpaper.png
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet 
 

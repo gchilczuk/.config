@@ -1,3 +1,6 @@
+#!/bin/bash
+
+apt update
 
 # install zsh
 apt install -y zsh
@@ -15,7 +18,7 @@ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.zshenv
 
 exec "$SHELL"
 
-apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev
+apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev
 
 pyenv install 3.7.0
 pyenv virtualenv 3.7.0 global3.7
@@ -57,6 +60,7 @@ snap install qalculate
 # apply config
 cp ./i3/config ~/.config/i3/config
 cp ./i3/lock.sh ~/.config/i3/lock.sh
+cp ./bin/wallpaper.png ~/.config/i3/wallpaper.png
 cp ./i3status/ ~/.config/i3status/
 cp ./rofi/config.rasi ~/.config/rofi/config.rasi 
 cp ./zshrc ~/.zshrc
