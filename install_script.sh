@@ -30,10 +30,14 @@ apt install -y Thunar
 apt install -y feh
 
 # other must have
+apt install -y htop 
 apt install -y redshift redshift-gtk 
 apt install -y copyq
+apt install -y shutter
 apt install -y okular
 apt install -y kazam
+apt install -y cheese
+apt install -y vlc
 
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add -
 apt install apt-transport-https
@@ -51,6 +55,10 @@ pip install -y thefuck
 add-apt-repository ppa:keepassx/ppa
 apt update
 apt install -y keepassx
+
+apt-add-repository ppa:neovim-ppa/stable
+apt update
+apt install neovim
 
 # install snaps
 snap install tldr
