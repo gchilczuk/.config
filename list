@@ -11,11 +11,16 @@ rofi
 thunar
 blueman-applet
 feh
+arandr
+scrot
 
 tldr
 htop
+tree
 lxappearance
 pavucontrol
+openvpn
+network-manager-openvpn-gnome
 
 redshift
 copyq

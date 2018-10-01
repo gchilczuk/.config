@@ -26,14 +26,14 @@ pyenv virtualenv 3.7.0 global3.7
 pyenv global global3.7
 
 # i3 environment
-sudo apt install -y i3 py3status rofi thunar feh blueman-applet lxappearance pavucontrol gsimplecal
+sudo apt install -y i3 py3status rofi thunar feh scrot blueman-applet lxappearance pavucontrol gsimplecal arandr
 
 #
 # There is a moment to logout and login again with i3
 # 
 
 # other must have
-sudo apt install -y htop okular
+sudo apt install -y htop okular openvpn network-manager-openvpn-gnome tree
 sudo apt install -y redshift redshift-gtk copyq shutter kazam cheese clementine vlc
 pip install thefuck
 
