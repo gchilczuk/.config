@@ -33,7 +33,7 @@ sudo apt install -y i3 py3status rofi thunar feh scrot blueman-applet lxappearan
 # 
 
 # other must have
-sudo apt install -y htop okular openvpn network-manager-openvpn-gnome tree
+sudo apt install -y htop okular openvpn network-manager-openvpn-gnome tree tig
 sudo apt install -y redshift redshift-gtk copyq shutter kazam cheese clementine vlc
 pip install thefuck
 
