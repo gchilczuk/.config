@@ -15,16 +15,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # i3 environment
 sudo apt install -y i3 py3status rofi thunar feh scrot blueman-applet lxappearance pavucontrol gsimplecal arandr
 
-# apply config
-cp ./i3/config ~/.config/i3/config
-cp ./i3/lock.sh ~/.config/i3/lock.sh
-cp ./bin/wallpaper.png ~/.config/i3/wallpaper.png
-cp -r ./i3status/ ~/.config/i3status/
-mkdir ~/.config/rofi/
-cp ./rofi/config.rasi ~/.config/rofi/config.rasi 
-cp ./.zshrc ~/.zshrc
-sudo cp ./bin/calc ./bin/*.sh /usr/loca/bin/
-
 #
 # There is a moment to logout and login again with i3
 # 
