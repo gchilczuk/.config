@@ -1,8 +1,2 @@
 #!/bin/bash
-pactl set-sink-volume 0 toggle
-pactl set-sink-volume 1 toggle
-pactl set-sink-volume 2 toggle
-pactl set-sink-volume 3 toggle
-pactl set-sink-volume 4 toggle
-pactl set-sink-volume 5 toggle
-pactl set-sink-volume 6 toggle
+for kar in $(pactl list | grep karta | cut -d'.' -f1); do pactl set-sink-volume $kar toggle; done
