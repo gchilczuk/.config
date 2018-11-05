@@ -203,9 +203,9 @@ bindsym $mod+shift+x exec lock.sh
 bindsym $mod+l exec lock.sh
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%; exec pactl set-sink-volume 2 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%; exec --no-startup-id pactl set-sink-volume 2 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle; exec --no-startup-id pactl set-sink-mute 2 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec increase_sound_volume.sh
+bindsym XF86AudioLowerVolume exec decrease_sound_volume.sh
+bindsym XF86AudioMute exec toggle_mute_sound.sh
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec light.sh -inc 500 # increase screen brightness
