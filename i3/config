@@ -137,7 +137,8 @@ mode "$control" {
     bindsym $mod+p exec systemctl poweroff
     bindsym $mod+r exec systemctl reboot
     bindsym $mod+l exec i3-msg exit
-    bindsym $mod+x exec lock.sh
+    bindsym $mod+x exec lock.sh; mode "default"
+    bindsym x exec i3lock -e -f -c 000000; mode "default"
     bindsym $mod+s exec lock.sh; mode "default"; exec sleep 2 && systemctl suspend
     bindsym Escape mode "default"
 }

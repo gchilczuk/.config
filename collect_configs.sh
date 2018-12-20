@@ -9,3 +9,4 @@ cp ~/.config/i3/wallpaper.png ./bin/wallpaper.png
 cp ~/.config/rofi/config.rasi ./rofi/config.rasi
 cp ~/.zshrc zsh/
 cp $ZSH/custom/alias.zsh zsh/
+cp $ZSH/custom/function.zsh zsh/
