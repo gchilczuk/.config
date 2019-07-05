@@ -7,7 +7,8 @@ cp -r ./i3status/ ~/.config/i3status/
 mkdir ~/.config/rofi/
 cp ./rofi/config.rasi ~/.config/rofi/config.rasi 
 cp ./zsh/.zshrc ~/.zshrc
-cp ./zsh/alias.zsh $ZSH/custom/
+cp ./zsh/alias.zsh $ZSH/custom/alias.zsh
+cp ./zsh/function.zsh $ZSH/custom/function.zsh
 sudo cp ./bin/calc ./bin/*.sh /usr/local/bin/
 
 sudo chown root:root /usr/local/bin/light.sh

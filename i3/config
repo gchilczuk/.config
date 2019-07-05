@@ -243,6 +243,7 @@ mode "⚡" {
     bindsym backslash exec subl ~/.config/i3/config; mode "default"
     bindsym m exec gnome-system-monitor; mode "default"
     bindsym s exec subl; mode "default"
+    bindsym k exec gnome-calendar; mode "default"
 
     bindsym Escape mode "default"
 }
