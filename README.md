@@ -1,6 +1,6 @@
 # CONFIG files
 
-The aim of this repository is to automate setting up my custom environment.
+The main purpouse of this repository is to automate setting up my custom environment.
 
 # Usage
 ```bash
@@ -23,7 +23,6 @@ Themes and icon themes
 www.gnome-look.org
 widgets - Telinkrin-Buttons-Right
 icons - Obsidian-cyan
-
 
 
 # License

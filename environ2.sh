@@ -13,9 +13,6 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt update
 sudo apt install -y sublime-text
 
-sudo apt-add-repository ppa:neovim-ppa/stable
-sudo apt update
-sudo apt install neovim
 
 # other useful
 sudo add-apt-repository ppa:micahflee/ppa

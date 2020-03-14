@@ -13,9 +13,10 @@ source .zshenv
 git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
 echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.zshenv
 
-pyenv install 3.7.0
-pyenv virtualenv 3.7.0 global3.7
-pyenv global global3.7
+pyenv install 3.8.2
+pyenv virtualenv 3.8.2 global3.8
+pyenv global global3.8
 pip install thefuck
 
-sudo snap install pycharm-professional --classic
+# sudo snap install pycharm-professional --classic
+# https://www.jetbrains.com/pycharm/download/other.html
